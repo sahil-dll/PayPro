@@ -13,10 +13,11 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Signup></Signup>}></Route>
           <Route path="/signup" element={<Signup></Signup>}></Route>
           <Route path="/signin" element={<Signin></Signin>}></Route>
           <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
-          <Route path="/sendmoney" element={<SendMoney></SendMoney>}></Route>
+          <Route path="/send" element={<SendMoney></SendMoney>}></Route>
         </Routes>
       </BrowserRouter>
     </>
