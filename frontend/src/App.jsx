@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Signin } from "./pages/Signin";
 import { Signup } from "./pages/Signup";
 import { Dashboard } from "./pages/Dashboard";
@@ -9,7 +10,16 @@ import { SendMoney } from "./pages/SendMoney";
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline bg-red-500">Hello world!</h1>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/signup" element={<Signup></Signup>}></Route>
+          <Route path="/signin" element={<Signin></Signin>}></Route>
+          <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
+          <Route path="/sendmoney" element={<SendMoney></SendMoney>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
